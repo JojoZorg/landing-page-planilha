@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudo de Viabilidade Econômico-Financeira | Viabilidade Fácil</title>
+  <meta name="description" content="Planilha que projeta 18 meses do seu negócio, calcula VPL, TIR e Payback automaticamente. Descubra em 5 minutos se sua ideia dá lucro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              DEFAULT: '#0BA646',
+              dark: '#07853A',
+              light: '#E8F9EF',
+              deep: '#064E28'
+            },
+            ink: '#0F172A'
+          },
+          boxShadow: {
+            cta: '0 10px 25px -5px rgba(11, 166, 70, 0.5)',
+            card: '0 4px 20px -4px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .faq-answer { display: none; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .2s ease; }
+  </style>
+</head>
+<body class="font-sans text-ink bg-gray-50 antialiased">
+
+  <!-- ===================== 1. HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 text-xl font-extrabold tracking-tight">
+        <span class="w-8 h-8 rounded-lg bg-brand text-white flex items-center justify-center text-sm">
+          <i class="fa-solid fa-chart-line"></i>
+        </span>
+        Viabilidade <span class="text-brand">Fácil</span>
+      </a>
+      <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white text-sm sm:text-base font-bold px-4 sm:px-6 py-2.5 rounded-xl shadow-cta transition-all hover:-translate-y-0.5">
+        <i class="fa-solid fa-cart-shopping hidden sm:inline"></i>
+        Quero minha planilha
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== 2. HERO ===================== -->
+    <section class="bg-white border-b border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 text-center flex flex-col items-center">
+        <span class="inline-flex items-center gap-2 bg-brand-light text-brand-deep text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-bolt"></i> Projeta 18 meses do seu negócio em minutos
+        </span>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight max-w-4xl">
+          Descubra em 5 minutos se o seu negócio vai dar <span class="text-brand">lucro</span> ou apenas <span class="text-red-600">dor de cabeça</span>.
+        </h1>
+
+        <p class="mt-5 text-base sm:text-xl text-gray-600 max-w-2xl leading-relaxed">
+          A planilha definitiva que projeta 18 meses do seu negócio, calcula <strong class="text-ink font-semibold">VPL, Payback e TIR</strong> sem você precisar ser um expert em finanças.
+        </p>
+
+        <div class="mt-8 flex flex-col items-center gap-3 w-full max-w-md">
+          <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+             class="w-full inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white text-lg sm:text-xl font-extrabold px-8 py-4 rounded-2xl shadow-cta transition-all hover:-translate-y-0.5">
+            Garantir minha planilha agora por R$ 47
+          </a>
+          <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-xs sm:text-sm text-gray-500 font-medium">
+            <span><i class="fa-solid fa-shield-halved text-brand mr-1"></i> Garantia de 7 dias</span>
+            <span><i class="fa-solid fa-paper-plane text-brand mr-1"></i> Entrega imediata</span>
+            <span><i class="fa-solid fa-lock text-brand mr-1"></i> Compra segura Kiwify</span>
+          </div>
+        </div>
+
+        <!-- Mockup: substitua este bloco pelo print do Dashboard da planilha -->
+        <div class="mt-12 w-full max-w-4xl">
+          <div class="rounded-3xl p-1.5 bg-gradient-to-br from-brand-light via-gray-100 to-brand-light shadow-card">
+            <div class="border-2 border-dashed border-brand/40 rounded-2xl bg-white aspect-video flex flex-col items-center justify-center gap-3 p-6 text-center">
+              <i class="fa-regular fa-image text-4xl text-brand/60"></i>
+              <p class="font-bold text-gray-700">Espaço reservado para o print do Dashboard</p>
+              <p class="text-sm text-gray-500 max-w-md">
+                Substitua este bloco por <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">&lt;img src="dashboard.png" ...&gt;</code>
+                com a captura de tela da aba Dashboard da planilha.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. DORES ===================== -->
+    <section class="py-14 sm:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-center tracking-tight">
+          Você se identifica com isso?
+        </h2>
+        <p class="mt-3 text-center text-gray-600">Antes de investir suas economias, responda com sinceridade: 🔍</p>
+
+        <ul class="mt-8 sm:mt-10 space-y-4">
+          <li class="flex items-start gap-3.5 bg-white rounded-2xl p-4 sm:p-5 shadow-card">
+            <span class="shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </span>
+            <p class="text-gray-700 leading-relaxed font-medium">Tem medo de investir suas economias e <strong>quebrar no primeiro ano</strong>?</p>
+          </li>
+          <li class="flex items-start gap-3.5 bg-white rounded-2xl p-4 sm:p-5 shadow-card">
+            <span class="shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </span>
+            <p class="text-gray-700 leading-relaxed font-medium">Não sabe se o faturamento vai <strong>cobrir o aluguel e os funcionários</strong>?</p>
+          </li>
+          <li class="flex items-start gap-3.5 bg-white rounded-2xl p-4 sm:p-5 shadow-card">
+            <span class="shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </span>
+            <p class="text-gray-700 leading-relaxed font-medium">Acha que <strong>VPL, TIR e Payback</strong> são idiomas alienígenas? 👽</p>
+          </li>
+          <li class="flex items-start gap-3.5 bg-white rounded-2xl p-4 sm:p-5 shadow-card">
+            <span class="shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </span>
+            <p class="text-gray-700 leading-relaxed font-medium">Já tentou fazer conta <strong>no caderno</strong> ou em planilhas confusas da internet?</p>
+          </li>
+        </ul>
+
+        <p class="mt-8 text-center text-lg font-semibold text-gray-800">
+          Calma. <span class="text-brand">Exatamente para isso que esta planilha existe.</span> 👇
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. A SOLUÇÃO ===================== -->
+    <section class="py-14 sm:py-20 bg-white border-y border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+            Conheça o <span class="text-brand">Estudo de Viabilidade Econômico-Financeira</span>
+          </h2>
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            Uma planilha profissional, pronta para usar e pensada para quem não é da área financeira.
+            Ela já vem com <strong class="text-ink">proteção de fórmulas</strong> — para você não apagar
+            nenhum cálculo sem querer — e um guia <strong class="text-ink">"Comece Aqui"</strong> que te
+            conduz passo a passo do primeiro preenchimento até a decisão final.
+          </p>
+        </div>
+
+        <div class="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          <div class="bg-gray-50 rounded-2xl p-6 sm:p-7 border border-gray-100">
+            <span class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </span>
+            <h3 class="font-bold text-lg">Fácil de Usar</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Preencha apenas as <strong class="text-amber-600">células amarelas</strong> 🟡. O resto é automático — as fórmulas protegidas fazem todas as contas por você.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl p-6 sm:p-7 border border-gray-100">
+            <span class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-chart-column"></i>
+            </span>
+            <h3 class="font-bold text-lg">Dashboard Visual</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Gráficos de Payback e Lucro que mudam de cor: <strong class="text-red-600">vermelho</strong> para prejuízo, <strong class="text-brand">verde</strong> para lucro. Sem interpretar números: você só lê o resultado.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl p-6 sm:p-7 border border-gray-100">
+            <span class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-traffic-light"></i>
+            </span>
+            <h3 class="font-bold text-lg">Semáforo de Saúde</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              O projeto é viável? O semáforo te avisa na hora: 🟢 saudável, 🟡 atenção ou 🔴 inviável. Decisão sem enrolação.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl p-6 sm:p-7 border border-gray-100">
+            <span class="w-12 h-12 rounded-xl bg-brand-light text-brand flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-sliders"></i>
+            </span>
+            <h3 class="font-bold text-lg">Análise de Cenários</h3>
+            <p class="mt-2 text-gray-600 leading-relaxed">
+              Veja o <strong>Otimista</strong>, o <strong>Realista</strong> e o <strong>Pessimista</strong> com um clique — e descubra se sua ideia se paga nos três mundos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. COMO FUNCIONA ===================== -->
+    <section class="py-14 sm:py-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-center tracking-tight">
+          Como funciona? São só <span class="text-brand">3 passos</span>
+        </h2>
+        <p class="mt-3 text-center text-gray-600">Do zero ao veredito em menos de uma hora. ⏱️</p>
+
+        <div class="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="relative bg-white rounded-2xl p-7 shadow-card border border-gray-100 text-center">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center font-extrabold shadow-cta">1</span>
+            <i class="fa-solid fa-keyboard text-2xl text-brand mt-2"></i>
+            <h3 class="mt-3 font-bold text-lg">Insira seus dados</h3>
+            <p class="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+              Preencha seus custos e receitas nas células amarelas da aba "Input de Dados".
+            </p>
+          </div>
+
+          <div class="relative bg-white rounded-2xl p-7 shadow-card border border-gray-100 text-center sm:mt-3">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center font-extrabold shadow-cta">2</span>
+            <i class="fa-solid fa-toggle-on text-2xl text-brand mt-2"></i>
+            <h3 class="mt-3 font-bold text-lg">Escolha o cenário</h3>
+            <p class="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+              Selecione Otimista, Realista ou Pessimista na lista suspensa e compare.
+            </p>
+          </div>
+
+          <div class="relative bg-white rounded-2xl p-7 shadow-card border border-gray-100 text-center sm:mt-6">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center font-extrabold shadow-cta">3</span>
+            <i class="fa-solid fa-gauge-high text-2xl text-brand mt-2"></i>
+            <h3 class="mt-3 font-bold text-lg">Veja o veredito</h3>
+            <p class="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
+              Confira no Dashboard o VPL, a TIR e o Payback — e decida com segurança.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-cta transition-all hover:-translate-y-0.5">
+            <i class="fa-solid fa-arrow-right"></i> Começar minha análise agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. BÔNUS / GLOSSÁRIO ===================== -->
+    <section class="py-14 sm:py-20 bg-gradient-to-br from-brand-deep to-brand-dark text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <span class="inline-block bg-amber-400 text-amber-950 text-xs sm:text-sm font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wide">
+          🎁 Bônus incluso na planilha
+        </span>
+        <h2 class="mt-5 text-2xl sm:text-4xl font-extrabold tracking-tight">
+          Não entende de finanças? Nós traduzimos para você.
+        </h2>
+        <p class="mt-5 text-brand-light text-base sm:text-lg leading-relaxed">
+          A planilha inclui um <strong class="text-white">Glossário completo</strong> em linguagem simples:
+          o que é <strong class="text-white">VPL</strong> (quanto vale o projeto hoje, descontado pela TMA),
+          <strong class="text-white">TIR</strong> (a taxa de retorno do seu investimento),
+          <strong class="text-white">CMV</strong> (custo do que você vende),
+          <strong class="text-white">EBITDA</strong> (o lucro operacional puro) e
+          <strong class="text-white">Margem de Segurança</strong> (de quanto pode errar antes de dar prejuízo).
+        </p>
+        <p class="mt-4 text-sm sm:text-base text-brand-light">
+          Nenhum jargão sem tradução. Você aprende finanças enquanto usa a ferramenta. 📚
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 7. PARA QUEM É ===================== -->
+    <section class="py-14 sm:py-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-center tracking-tight">
+          Para quem é essa planilha?
+        </h2>
+        <p class="mt-3 text-center text-gray-600">Para quem vai investir de verdade e não quer apostar no escuro.</p>
+
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+          <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow-card border border-gray-100">
+            <span class="text-3xl">🍷</span>
+            <p class="mt-3 font-semibold">Donos de Adega</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow-card border border-gray-100">
+            <span class="text-3xl">🚗</span>
+            <p class="mt-3 font-semibold">Lava-Jatos</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow-card border border-gray-100">
+            <span class="text-3xl">🍽️</span>
+            <p class="mt-3 font-semibold">Restaurantes</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow-card border border-gray-100">
+            <span class="text-3xl">👕</span>
+            <p class="mt-3 font-semibold">Lojas de Roupa</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow-card border border-gray-100">
+            <span class="text-3xl">🛠️</span>
+            <p class="mt-3 font-semibold">Prestadores de Serviço</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow-card border border-gray-100">
+            <span class="text-3xl">💡</span>
+            <p class="mt-3 font-semibold">Quem sai do CLT</p>
+          </div>
+        </div>
+
+        <p class="mt-8 max-w-2xl mx-auto text-center text-gray-600 leading-relaxed">
+          Se você quer <strong class="text-ink">tirar a ideia do papel com segurança</strong> — e não no achismo —, essa ferramenta foi feita para você.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 8. OFERTA E GARANTIA ===================== -->
+    <section id="oferta" class="pb-14 sm:pb-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="rounded-3xl bg-white shadow-card border-2 border-brand/30 p-7 sm:p-10 text-center relative overflow-hidden">
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand to-brand-light"></div>
+
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            Tudo isso por um único pagamento
+          </h2>
+
+          <div class="mt-6 flex flex-col items-center">
+            <span class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Valor do investimento</span>
+            <span class="mt-1 text-6xl sm:text-7xl font-extrabold text-brand tracking-tight">
+              R$ 47
+            </span>
+            <span class="mt-1 text-gray-500 text-sm">Pagamento único · Acesso vitalício · Sem mensalidade</span>
+          </div>
+
+          <ul class="mt-7 text-left max-w-sm mx-auto space-y-2.5 text-gray-700">
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand mt-1"></i> 5 abas: Comece Aqui, Input de Dados, Projeto, Dashboard e Glossário</li>
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand mt-1"></i> Projeção de 18 meses com VPL, TIR e Payback automáticos</li>
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand mt-1"></i> Análise de Sensibilidade: Otimista, Realista e Pessimista</li>
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand mt-1"></i> Fórmulas protegidas + guia "Comece Aqui" passo a passo</li>
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand mt-1"></i> Checklist completo com todos os dados que você precisa separar</li>
+          </ul>
+
+          <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+             class="mt-8 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white text-lg sm:text-xl font-extrabold px-10 py-4 rounded-2xl shadow-cta transition-all hover:-translate-y-0.5">
+            <i class="fa-solid fa-lock-open"></i> Comprar agora com segurança
+          </a>
+
+          <div class="mt-6 flex items-center justify-center gap-3 rounded-2xl bg-brand-light px-5 py-4 max-w-md mx-auto">
+            <i class="fa-solid fa-shield-halved text-xl text-brand"></i>
+            <p class="text-sm sm:text-base text-brand-deep font-medium leading-snug">
+              <strong>Satisfação garantida ou seu dinheiro de volta</strong> em até 7 dias (Garantia Kiwify).
+            </p>
+          </div>
+
+          <p class="mt-5 text-xs text-gray-400">
+            Pagamento processado pela Kiwify · Ambiente 100% seguro · Arquivo enviado para o seu e-mail logo após a compra
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 9. FAQ ===================== -->
+    <section class="py-14 sm:py-20 bg-white border-t border-gray-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-center tracking-tight">
+          Perguntas Frequentes
+        </h2>
+        <p class="mt-3 text-center text-gray-600">Ficou alguma dúvida? Provavelmente está aqui. 👇</p>
+
+        <div class="mt-10 space-y-3" id="faq">
+          <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-4 font-semibold">
+              <span>Preciso saber Excel avançado?</span>
+              <i class="faq-icon fa-solid fa-plus text-brand shrink-0"></i>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed">
+              Não! Basta preencher as células amarelas com os seus dados. Todos os cálculos, gráficos e indicadores são gerados automaticamente pelas fórmulas já prontas e protegidas.
+            </div>
+          </div>
+
+          <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-4 font-semibold">
+              <span>Serve para qualquer tipo de negócio?</span>
+              <i class="faq-icon fa-solid fa-plus text-brand shrink-0"></i>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed">
+              Sim! A estrutura financeira é universal: você informa receitas, CMV, custos fixos e funcionários, e a lógica funciona para adega, lava-jato, restaurante, loja ou serviço.
+            </div>
+          </div>
+
+          <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-4 font-semibold">
+              <span>Como recebo o arquivo?</span>
+              <i class="faq-icon fa-solid fa-plus text-brand shrink-0"></i>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed">
+              No seu e-mail, logo após o pagamento via Kiwify. É rápido, automático e seguro — em poucos minutos você já está analisando seu negócio.
+            </div>
+          </div>
+
+          <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-4 font-semibold">
+              <span>Posso usar no celular?</span>
+              <i class="faq-icon fa-solid fa-plus text-brand shrink-0"></i>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-5 text-gray-600 leading-relaxed">
+              Recomendamos o uso no computador para melhor visualização do Dashboard e dos gráficos, mas a planilha funciona em qualquer lugar que abra o Excel.
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="font-semibold text-gray-700">Ainda tem dúvida se a sua ideia é viável?</p>
+          <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+             class="mt-3 inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-cta transition-all hover:-translate-y-0.5">
+            Descubra agora por R$ 47
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== 10. FOOTER ===================== -->
+  <footer class="bg-ink text-gray-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="flex flex-col items-center text-center gap-5">
+        <a href="#" class="flex items-center gap-2 text-lg font-extrabold text-white">
+          <span class="w-7 h-7 rounded-lg bg-brand text-white flex items-center justify-center text-xs">
+            <i class="fa-solid fa-chart-line"></i>
+          </span>
+          Viabilidade <span class="text-brand">Fácil</span>
+        </a>
+        <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-bold px-7 py-3 rounded-xl shadow-cta transition-all hover:-translate-y-0.5">
+          Quero minha planilha agora
+        </a>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <p>&copy; <span id="year">2025</span> Viabilidade Fácil. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+          <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA fixo mobile -->
+  <div class="fixed bottom-0 inset-x-0 z-50 border-t border-gray-200 bg-white/95 backdrop-blur px-4 py-3 sm:hidden">
+    <a href="https://pay.kiwify.com.br/roOFg7p" target="_blank" rel="noopener"
+       class="w-full inline-flex items-center justify-center gap-2 bg-brand text-white font-extrabold px-6 py-3.5 rounded-xl shadow-cta">
+      Garantir por R$ 47 <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="h-16 sm:hidden"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var triggers = document.querySelectorAll('.faq-trigger');
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var item = trigger.closest('.faq-item');
+          var wasOpen = item.classList.contains('open');
+
+          document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+            openItem.classList.remove('open');
+          });
+
+          if (!wasOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+
+      var year = document.getElementById('year');
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
